@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "slug": "xv-valeria-2026",
+  "template": "xv-arco-princess",
+  "tipo_evento": "xv",
+  "paquete": "armonia",
+  "evento": {
+    "fecha": "2026-04-25T13:00:00",
+    "host": {
+      "nombre": "Ivonne Esmeralda"
+    }
+  },
+  "meta": {
+    "title": "Mis XV Años | Ivonne Esmeralda",
+    "description": "Acompáñanos a celebrar mis XV años",
+    "lang": "es",
+    "favicon": "favicon.ico"
+  },
+
+  "logo": {
+    "type": "text",
+    "value": "Mis XV Años"
+  },
+  "media": {
+    "hero_background": "quinceañera.jpeg",
+    "presentacion": "princesa.svg",
+    "vestimenta_icon": "9.svg",
+    "galeria": ["gallery1.jpeg", "gallery2.jpeg", "gallery3.jpeg", "gallery4.jpeg", "gallery5.jpeg"]
+  },
+  "audio": {
+    "enabled": true,
+    "src": "cancion.mp3",
+    "autoplay_on_open": true,
+    "loop": true,
+    "volume": 0.5,
+    "fade_in": true,
+    "icons": {
+      "play": "play.svg",
+      "pause": "pause.svg"
+    }
+  },
+
+  "opening": {
+    "enabled": true,
+    "phrase": {
+      "enabled": true,
+      "text": "Con mucha ilusión…",
+      "duration": 1400
+    },
+    "particles": {
+      "enabled": true,
+      "type": "sparkles",
+      "count": 14
+    },
+    "scroll_hint": {
+      "enabled": true,
+      "text": "Desliza para continuar"
+    }
+  },
+
+  "navbar": {
+    "enabled": true,
+    "logo": {
+      "use_global": true
+    },
+    "items": [
+      { "id": "inicio", "label": "Inicio", "href": "#inicio" },
+      { "id": "ubicacion", "label": "Lugar", "href": "#ubicacion" },
+      { "id": "programa", "label": "Programa", "href": "#programa" },
+      { "id": "regalos", "label": "Regalos", "href": "#regalos" },
+      { "id": "vestimenta", "label": "Vestimenta", "href": "#vestimenta" },
+      { "id": "galeria", "label": "Galería", "href": "#galeria" },
+      { "id": "rsvp", "label": "Asistencia", "href": "#rsvp" }
+    ]
+  },
+
+  "hero": {
+    "enabled": true,
+    "names": {
+      "festejada": "XV Años Ivonne Esmeralda"
+    },
+    "countdown_labels": {
+      "dias": "Días",
+      "horas": "Horas",
+      "minutos": "Minutos",
+      "segundos": "Segundos"
+    }
+  },
+
+  "presentacion": {
+    "enabled": true,
+    "titulo": "Tengo el honor de invitarte a celebrar mis XV años",
+    "nombres": "IVONNE ESMERALDA SÁNCHEZ ORTIZ",
+    "frase": "Con la bendición de Dios y en compañía de mis padres:",
+    "padres": {
+      "festejada": ["Marcos Sánchez Cruz", "Flor Ortiz Potenciano"]
+    },
+    "padrinos": ["",""],
+    "texto_final": "Este día marca una nueva etapa en mi vida y me encantaría compartirlo contigo.",
+    "labels": {
+      "padres": "Mis Padres",
+      "padrinos": ""
+    }
+  },
+
+  "ubicacion": {
+    "enabled": true,
+    "titulo": "Ubicación",
+    "lugares": [
+      {
+        "enabled": false,
+        "tipo": "Ceremonia Religiosa",
+        "hora": "13:00 HRS",
+        "lugar": "Parroquia de la Santísima Trinidad Tepango",
+        "direccion": ["C. 6 Sur 2,", "La Trinidad Tepango,", "74365 Atlixco, Pue."],
+        "mapa": "https://maps.app.goo.gl/HcezGWfbd4v5thhm7"
+      },
+      {
+        "enabled": true,
+        "tipo": "Fiesta",
+        "hora": "13:00 HRS",
+        "lugar": "Quinta Shamá",
+        "direccion": [
+          "Calle Tomas Garrido S/N,",
+          "Entre Calle Emeterio Ramón y",
+          "Francisco J. Santamaria",
+          "Villa Macultepec, Tab."
+        ],
+        "mapa": "https://maps.app.goo.gl/dTdJSAYUY2PX5CoX6"
+      }
+    ]
+  },
+
+  "programa": {
+    "enabled": true,
+    "titulo": "Programa del Evento",
+    "progress_steps": [20, 40, 60, 80, 100],
+    "items": [
+      {
+        "hora": "13:00 hrs",
+        "texto": "Recepción",
+        "icono": "6.svg",
+        "lado": "right"
+      },
+      {
+        "hora": "15:00 hrs",
+        "texto": "Ramambaramba",
+        "icono": "8.svg",
+        "lado": "right"
+      }
+    ]
+  },
+
+  "vestimenta": {
+    "enabled": true,
+    "titulo": "Código de Vestimenta",
+    "formal": "Traje de baño. No olvides traer todo lo necesario para disfrutar conmigo de una albercada increíble que he preparado con mucho cariño para celebrar mis XV años junto a ti",
+    "labels": {
+      "mujeres": "",
+      "hombres": ""
+    },
+    "mujeres": "",
+    "hombres": ""
+  },
+
+  "regalos": {
+    "enabled": true,
+    "titulo": "Sugerencia de Regalos",
+    "descripcion": "Tu presencia es mi mayor regalo",
+    "items": [
+      { "icono": "11.svg", "label": "Regalo Sorpresa" }
+    ]
+  },
+
+  "galeria": {
+    "enabled": true,
+    "titulo": "Galería"
+  },
+
+  "rsvp": {
+    "enabled": true,
+    "mode": "panel",
+
+    "telefono": "529932872317",
+    "mensaje_base": "Hola, confirmo mi asistencia a los XV años de Ivonne Esmeralda.",
+    "fecha_limite": "2026-04-15",
+
+    "qr": { "enabled": false },
+
+    "titulo": "Confirmar asistencia",
+    "texto": "Por favor confirma tu asistencia",
+    "nota": "Te agradeceremos confirmar tu asistencia antes del {{fecha_limite}}.",
+
+    "pase": {
+      "enabled": false,
+      "label": "Pase para"
+    },
+
+    "mesa": {
+      "enabled": false,
+      "label": "Mesa"
+    },
+
+    "botones": {
+      "si": "Sí, asistiré",
+      "no": "No podré asistir"
+    },
+
+    "final": {
+      "titulo": "¡Gracias por confirmar!",
+      "texto": "Hemos reservado estos lugares en su honor.",
+      "firma": "XV Años Ivonne Esmeralda"
+    }
+  },
+  "editorial": {
+    "hero": {
+      "enabled": true,
+      "text": "Hoy celebro una nueva etapa en mi vida"
+    },
+    "presentacion": {
+      "enabled": true,
+      "text": "Gracias a quienes me han acompañado siempre"
+    },
+    "ubicacion": {
+      "enabled": true,
+      "text": "El lugar donde todo sucederá"
+    },
+    "programa": {
+      "enabled": true,
+      "text": "Cada momento tiene su magia"
+    },
+    "vestimenta": {
+      "enabled": true,
+      "text": "Una noche para brillar"
+    },
+    "regalos": {
+      "enabled": false,
+      "text": "Lo más importante para mí es compartir este día contigo"
+    },
+    "galeria": {
+      "enabled": false,
+      "text": "Momentos que forman mi historia"
+    },
+    "rsvp": {
+      "enabled": true,
+      "text": "Acompáñanos en este día especial"
+    }
+  },
+  "footer": {
+    "enabled": true,
+    "text": "Diseñado con amor por"
+  }
+}
