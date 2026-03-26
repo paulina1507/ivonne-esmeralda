@@ -139,13 +139,13 @@
       {
         "hora": "13:00 hrs",
         "texto": "Recepción",
-        "icono": "7.svg",
+        "icono": "12.svg",
         "lado": "right"
       },
       {
         "hora": "15:00 hrs",
         "texto": "Ramambaramba",
-        "icono": "8.svg",
+        "icono": "13.svg",
         "lado": "right"
       }
     ]
@@ -166,9 +166,9 @@
   "regalos": {
     "enabled": true,
     "titulo": "Sugerencia de Regalos",
-    "descripcion": "Tu presencia es mi mayor regalo",
+    "descripcion": "Tu presencia es mi mayor regalo, pero si deseas obsequiarme algo, será recibido con mucho cariño",
     "items": [
-      { "icono": "11.svg", "label": "Regalo Sorpresa" }
+      { "icono": "11.svg", "label": "" }
     ]
   },
 
@@ -242,7 +242,7 @@
       "text": "Momentos que forman mi historia"
     },
     "rsvp": {
-      "enabled": true,
+      "enabled": false,
       "text": "Acompáñanos en este día especial"
     }
   },

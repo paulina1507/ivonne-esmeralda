@@ -180,9 +180,18 @@ fetch("assets/js/evento.json")
 
         padresNovioEl?.closest(".arco-grupo")?.remove();
 
-        if (p.padrinos?.length) {
-          setHTML("padrinos", p.padrinos.join("<br>"));
+        const tienePadrinos =
+          Array.isArray(p.padrinos) &&
+          p.padrinos.some((x) => x && x.trim() !== "");
+
+        if (tienePadrinos) {
+          setHTML(
+            "padrinos",
+            p.padrinos.filter((x) => x && x.trim() !== "").join("<br>"),
+          );
           setText("label-padrinos", p.labels?.padrinos || "Mis Padrinos");
+        } else {
+          document.getElementById("padrinos")?.closest(".arco-grupo")?.remove();
         }
       } else {
         /* ===== BODA ===== */
