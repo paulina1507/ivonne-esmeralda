@@ -31,7 +31,7 @@ fetch("assets/js/evento.json")
     const setText = (id, value) => {
       const el = document.getElementById(id);
       if (el && value !== undefined && value !== null) {
-        el.textContent = value;
+        el.innerHTML = String(value).replace(/\n/g, "<br>");
       }
     };
 
