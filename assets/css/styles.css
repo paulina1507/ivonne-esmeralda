@@ -8,7 +8,7 @@
   --verde-olivo: #6f7469;
   --verde-gris: #a2af9c;
   --shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
-  --envelope-color: #5b0f1b;
+  --envelope-color: #4e0000;
   --gold-primary: #9c7a2f;
   --gold-soft: #c8b37a;
   --gold: #9e8451;
@@ -68,6 +68,33 @@ body.content-ready .navbar {
   position: relative;
   inset: auto;
   min-height: 100vh;
+}
+
+.site-root::before,
+.site-root::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 2;
+  pointer-events: none;
+
+  background-image: url("../img/flor-borde.png");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
+
+  opacity: 0.9;
+}
+
+.site-root::before {
+  left: 0;
+}
+
+.site-root::after {
+  right: 0;
+  transform: scaleX(-1);
 }
 
 body.content-ready .site-root {
@@ -298,7 +325,7 @@ body.content-ready .navbar {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: clamp(38px, 8vw, 60px);
+  font-size: clamp(38px, 8vw, 50px);
 
   text-transform: uppercase;
 
@@ -398,160 +425,170 @@ body.content-ready .navbar {
 .hero-title span,
 .hero-name span {
   display: inline-block;
-    text-shadow:
-    0 1px 0 rgba(255,255,255,0.25), /* luz arriba */
-    0 2px 4px rgba(0,0,0,0.25),     /* sombra base */
-    0 6px 12px rgba(0,0,0,0.15);    /* profundidad */
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    /* luz arriba */ 0 2px 4px rgba(0, 0, 0, 0.25),
+    /* sombra base */ 0 6px 12px rgba(0, 0, 0, 0.15); /* profundidad */
 }
 
 .hero-name span {
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
 }
 
 .count-label {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 22px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-
-  color: var(--vino);
-  opacity: 0.7;
-
-  margin-top: 40px;
+  color: var(--vino); 
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 42px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 .hero-count {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 10px;
 
-  margin-top: 10px;
-  padding: 0 20px;
+  margin-top: 14px;
+  padding: 0 16px;
 
   opacity: 0;
-  transition: opacity 0.8s ease;
-  animation: heroFadeIn 1.6s ease forwards;
-  animation-delay: 0.25s;
-  justify-content: center;
-  align-items: center;
   animation: heroFadeIn 1.6s ease forwards 0.9s;
 }
 
+/* ============================= */
+/* CARD */
+/* ============================= */
+.count-item {
+  position: relative;
+  padding: 14px 8px;
+  border-radius: 18px;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.98),
+    rgba(255,255,255,0.85)
+  );
+
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(200, 179, 122, 0.5);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+
+  transition: all 0.25s ease;
+}
+
+/* ✨ brillo elegante (más fino que el tuyo) */
 .count-item::after {
   content: "";
   position: absolute;
   inset: 0;
-
-  border-radius: 16px;
+  border-radius: 18px;
 
   background: linear-gradient(
-    120deg,
+    110deg,
     transparent,
-    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.35),
     transparent
   );
 
   opacity: 0;
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .count-item:hover::after {
   opacity: 1;
 }
 
-.count-item {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-
-  border-radius: 16px;
-  padding: 12px 8px;
-
-  text-align: center;
-
-  border: 1px solid rgba(255, 174, 0, 0.2);
-
+/* 🔥 hover más fino */
+.count-item:hover {
+  transform: translateY(-2px);
   box-shadow:
-    0 6px 18px rgba(0,0,0,0.08),
-    0 2px 6px rgba(0,0,0,0.05);
-
-  transition: all 0.25s ease;
+    0 12px 26px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
-.count-item {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-
-  border-radius: 16px;
-  padding: 12px 8px;
-
-  text-align: center;
-
-  border: 1px solid rgba(255, 174, 0, 0.2);
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.08),
-    0 2px 6px rgba(0,0,0,0.05);
-
-  transition: all 0.25s ease;
-}
-
+/* ============================= */
+/* NÚMERO */
+/* ============================= */
 .count-item span {
   display: block;
 
-  font-size: clamp(22px, 5vw, 30px);
-  font-weight: 600;
-
-  color: var(--rojo-principal);
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 700;
+  color: var(--vino);
 
   text-shadow:
-    0 2px 4px rgba(0,0,0,0.2),
-    0 0 8px rgba(255,174,0,0.2);
+    0 2px 6px rgba(0,0,0,0.2),
+    0 0 6px rgba(200,179,122,0.25); /* 🔥 leve dorado */
+  letter-spacing: 0.5px;
 }
 
+/* ============================= */
+/* LABEL */
+/* ============================= */
 .count-item small {
-  display: block;
-  margin-top: 4px;
-
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  opacity: 0.7;
+  position: relative;
 }
 
-.count-label {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+.count-item small::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 1px;
+  margin: 4px auto 0;
 
-  opacity: 0.6;
-
-  margin-top: 10px;
-  margin-bottom: 6px;
+  background: rgba(200,179,122,0.4);
 }
 
 @media (max-width: 480px) {
+  .site-root::before,
+  .site-root::after {
+    width: 60px; /* 🔥 más delgado */
+    opacity: 0.75;
+
+    background-size: 100% auto;
+
+    /* 👇 evita que invada el contenido */
+    z-index: 1;
+  }
+
+  .site-root::before {
+    left: -20px; /* 🔥 lo empujamos afuera */
+  }
+
+  .site-root::after {
+    right: -20px;
+  }
+
   .hero-count {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 6px;
+    padding: 0 10px;
+    max-width: 320px;
+    margin: 20px auto 10px;
   }
 
   .count-item {
-    padding: 10px 6px;
+    padding: 10px 4px;
   }
 
-  .arco-base.arco-hero {
-    width: 86%;
-    max-width: 320px;
-    height: 520px;
-    border-radius: 200px 200px 0 0;
+  .count-item span {
+    font-size: clamp(18px, 5vw, 22px);
   }
 
-  .hero-count {
-    margin-top: 30px;
-    margin-bottom: 12px;
-    padding: 12px;
+  .count-item small {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .count-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 26px;
   }
 }
 
@@ -596,12 +633,41 @@ body.content-ready .navbar {
   }
 }
 
-.hero-section,
-.hero-section img.acuarela-left,
-.hero-section img.acuarela-right {
+.hero-section {
   display: none !important;
 }
 
+@media (max-width: 480px) {
+  /* TODOS LOS ARCOS */
+  .arco-base,
+  .arco-hero,
+  .arco-base.arco-hero {
+    width: 82% !important;
+    max-width: 290px !important;
+
+    border-radius: 180px 180px 0 0 !important;
+  }
+
+  /* ALTURA GENERAL */
+  .arco-base {
+    min-height: 520px !important;
+    padding: 60px 24px 55px !important;
+  }
+
+  /* HERO (el más grande) */
+  .arco-base.arco-hero {
+    height: 520px !important;
+  }
+
+  /* AJUSTE DE CONTENIDO INTERNO */
+  .arco-title {
+    font-size: 28px !important;
+  }
+
+  .arco-nombres {
+    font-size: 16px !important;
+  }
+}
 /* ========================================================= */
 /* ARCO PRESENTACIÓN – versión premium y alineada */
 /* ========================================================= */
@@ -845,7 +911,7 @@ body.content-ready .navbar {
 
   .hero-names {
     letter-spacing: 1px;
-    font-size: clamp(28px, 6vw, 28px);
+    font-size: clamp(26px, 6vw, 28px);
   }
 
   .hero-title span,
@@ -879,48 +945,6 @@ body.content-ready .navbar {
   padding: 0 !important; /* el hero maneja su espacio */
 }
 
-.acuarela-left,
-.acuarela-right {
-  position: absolute;
-  width: clamp(220px, 28vw, 360px);
-  opacity: 0.3;
-  filter: blur(1.5px);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* IZQUIERDA */
-.acuarela-left {
-  bottom: -20px;
-  left: -10%;
-  transform: rotate(-4deg);
-}
-
-/* DERECHA */
-.acuarela-right {
-  top: -20px;
-  right: -10%;
-  transform: rotate(6deg);
-}
-
-@media (max-width: 480px) {
-  /* ACUARELAS EXTERNAS */
-  .acuarela-left,
-  .acuarela-right {
-    width: 200px;
-    opacity: 0.25;
-  }
-
-  .acuarela-left {
-    left: -20%;
-    bottom: -20px;
-  }
-
-  .acuarela-right {
-    right: -20%;
-    top: -20px;
-  }
-}
 .section-arco,
 .hero-section {
   position: relative;
@@ -1098,25 +1122,6 @@ body.content-ready .navbar {
   }
 }
 
-/* ========================================================= */
-/* FLORES TIRA TABASQUEÑA  */
-/* ========================================================= */
-.separador-flor {
-  width: 100%;
-  height: clamp(80px, 12vw, 120px);
-
-  background-image: url("../img/flor-borde.png");
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: center;
-}
-
-@media (max-width: 480px) {
-  .separador-flor {
-    height: 140px;
-    background-size: auto 100%;
-  }
-}
 /* ========================================================= */
 /* PRESENTACIÓN  */
 /* ========================================================= */
@@ -2542,7 +2547,7 @@ body.footer-ready footer.site-footer {
   bottom: -118px;
   border-width: 116px 210px;
   border-style: solid;
-  border-bottom-color: var(--envelope-color);
+  border-bottom-color: var(--vino);
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-color: transparent;
@@ -2571,7 +2576,7 @@ body.footer-ready footer.site-footer {
   inset: 0;
 
   background:
-    linear-gradient(160deg, #6a0d0d 0%, #4e0000 55%, #2a0000 100%),
+    linear-gradient(160deg, #b91919 0%, #4e0000 55%, #2a0000 100%),
     radial-gradient(
       circle at 50% 10%,
       rgba(255, 255, 255, 0.12),
