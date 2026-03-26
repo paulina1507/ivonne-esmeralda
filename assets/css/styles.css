@@ -15,7 +15,7 @@
   --text-soft: #6b6b6b;
 
   --vino: #4e0000;
-  --rojo-principal: #841600; /* 🔥 rojo quemado dominante */
+  --rojo-principal: #7b0101; /* 🔥 rojo quemado dominante */
   --verde-mx: #2e7d32;
   --amarillo-mx: #fbc02d;
   --azul-rey: #1e40af;
@@ -440,11 +440,11 @@ body.content-ready .navbar {
   font-size: 22px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--vino); 
+  color: var(--vino);
   font-weight: 600;
   opacity: 0.8;
   margin: 42px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .hero-count {
@@ -468,8 +468,8 @@ body.content-ready .navbar {
   border-radius: 18px;
   background: linear-gradient(
     160deg,
-    rgba(255,255,255,0.98),
-    rgba(255,255,255,0.85)
+    rgba(255, 255, 255, 0.98),
+    rgba(255, 255, 255, 0.85)
   );
 
   backdrop-filter: blur(8px);
@@ -477,7 +477,7 @@ body.content-ready .navbar {
   box-shadow:
     0 10px 24px rgba(0, 0, 0, 0.12),
     0 2px 6px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255,255,255,0.8);
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 
   transition: all 0.25s ease;
 }
@@ -492,7 +492,7 @@ body.content-ready .navbar {
   background: linear-gradient(
     110deg,
     transparent,
-    rgba(255,255,255,0.35),
+    rgba(255, 255, 255, 0.35),
     transparent
   );
 
@@ -507,9 +507,6 @@ body.content-ready .navbar {
 /* 🔥 hover más fino */
 .count-item:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 12px 26px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
 /* ============================= */
@@ -522,12 +519,9 @@ body.content-ready .navbar {
   font-weight: 700;
   color: var(--vino);
 
-  text-shadow:
-    0 2px 6px rgba(0,0,0,0.2),
-    0 0 6px rgba(200,179,122,0.25); /* 🔥 leve dorado */
+  text-shadow: none; /* 👈 quitamos sombra SOLO aquí */
   letter-spacing: 0.5px;
 }
-
 /* ============================= */
 /* LABEL */
 /* ============================= */
@@ -542,7 +536,7 @@ body.content-ready .navbar {
   height: 1px;
   margin: 4px auto 0;
 
-  background: rgba(200,179,122,0.4);
+  background: rgba(200, 179, 122, 0.4);
 }
 
 @media (max-width: 480px) {
@@ -2030,246 +2024,6 @@ body.footer-ready footer.site-footer {
   animation: envelopeDrop 1.2s ease forwards;
 }
 
-/* ========================================================= */
-/* RSVP – SISTEMA UNIFICADO Y CONSISTENTE                    */
-/* ========================================================= */
-
-#rsvp {
-  padding-left: 6vw;
-  padding-right: 6vw;
-  position: relative;
-}
-
-/* ========================================================= */
-/* ARCO RSVP (CONTENEDOR ÚNICO)                              */
-/* ========================================================= */
-
-#rsvp .arco-base {
-  width: 430px;
-  min-height: 680px;
-  margin: 0 auto;
-  padding: 120px 48px 90px;
-
-  background: var(--vino);
-  border-radius: 260px 260px 0 0;
-  box-shadow: var(--shadow);
-
-  text-align: center;
-  position: relative;
-  display: block;
-}
-
-/* ❌ YA NO SE OCULTA EL ARCO */
-/*
-#rsvp.completed .arco-base {
-  display: none;
-}
-*/
-
-.hidden {
-  display: none !important;
-}
-
-/* ========================================================= */
-/* FORMULARIO RSVP                                           */
-/* ========================================================= */
-
-.rsvp-container {
-  max-width: 520px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#rsvp.completed #rsvp-form {
-  display: none;
-}
-
-.rsvp-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin: 1.6rem auto 2.4rem;
-  max-width: 460px;
-}
-
-/* ========================================================= */
-/* OPCIONES                                                  */
-/* ========================================================= */
-
-.rsvp-options {
-  display: flex;
-  justify-content: center;
-  gap: 1.6rem;
-  margin-bottom: 2.6rem;
-  flex-wrap: wrap;
-}
-
-.rsvp-btn {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  padding: 0.85rem 2.2rem;
-  border-radius: 30px;
-  border: 1px solid rgb(255, 255, 255);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: var(--blanco);
-}
-
-.rsvp-btn:hover {
-  transform: translateY(-2px);
-  background: var(--arena);
-  color: var(--negro);
-}
-
-/* ========================================================= */
-/* FINAL RSVP (DENTRO DEL ARCO)                              */
-/* ========================================================= */
-
-#rsvp-final {
-  display: none;
-
-  margin-top: 1.5rem;
-  text-align: center;
-
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.45s ease,
-    transform 0.45s ease;
-}
-
-#rsvp.completed #rsvp-final {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#rsvp-final h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-}
-
-#rsvp-final p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 460px;
-}
-
-.rsvp-sign {
-  margin-top: 36px;
-  font-family: "Great Vibes", cursive;
-  font-size: 32px;
-  color: #5e7c6f;
-  opacity: 0.9;
-}
-.rsvp-sign {
-  transform: rotate(-1deg);
-}
-
-.rsvp-label {
-  display: none;
-}
-
-.rsvp-label {
-  display: none;
-  font-size: 0.9rem;
-  color: var(--negro);
-  margin-bottom: 6px;
-  text-align: center;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-#rsvpNombreInput {
-  width: 220px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  color: #000 !important;
-  -webkit-text-fill-color: #000; /* 🔥 Safari / móvil */
-  background: var(--arena);
-  caret-color: #000; /* cursor negro */
-  border: 1px solid #cbbcbc;
-  text-align: center;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
-#rsvpNombreInput:focus {
-  border-color: #a88c8c;
-  box-shadow: 0 0 0 2px rgba(168, 140, 140, 0.2);
-}
-/* ========================================================= */
-/* FIX REVEAL + ESTADO FINAL                                 */
-/* ========================================================= */
-
-#rsvp.completed {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-#rsvp.completed.reveal {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-/* ========================================================= */
-/* RESPONSIVE                                                */
-/* ========================================================= */
-
-@media (max-width: 480px) {
-  #rsvp .arco-base {
-    width: 86%;
-    max-width: 320px;
-    min-height: 580px;
-    padding: 100px 28px 70px;
-    border-radius: 200px 200px 0 0;
-  }
-
-  .rsvp-text,
-  #rsvp-final p {
-    max-width: 100%;
-  }
-
-  .rsvp-options {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .rsvp-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  #rsvp {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  #rsvp .arco-base {
-    padding: 3rem 2rem;
-  }
-
-  .rsvp-container {
-    max-width: 100%;
-  }
-
-  .rsvp-options {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .rsvp-btn {
-    width: 100%;
-  }
-}
-
 /* ============================= */
 /* ANIMACIONES BASE              */
 /* ============================= */
@@ -2291,53 +2045,175 @@ body.footer-ready footer.site-footer {
   transition: all 0.4s ease;
 }
 
-/* ============================= */
-/* RESPONSIVE                    */
-/* ============================= */
+/* ========================================================= */
+/* RSVP – CLEAN VERSION (PC + MOBILE)                        */
+/* ========================================================= */
 
-@media (max-width: 768px) {
-  #rsvp {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  #rsvp .arco-base {
-    padding: 3rem 2rem;
-    max-height: none;
-  }
-
-  .rsvp-container {
-    max-width: 100%;
-  }
-
-  .rsvp-options {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .rsvp-btn {
-    width: 100%;
-  }
+/* CONTENEDOR GENERAL */
+#rsvp {
+  position: relative;
+  padding: 0;
 }
 
-/* ================= RSVP – PASE Y MESA ================= */
+/* ========================================================= */
+/* ARCO RSVP                                                 */
+/* ========================================================= */
+
+#rsvp .arco-base {
+  width: 430px;
+  min-height: 680px;
+  margin: 0 auto;
+
+  padding: 150px 48px 90px; /* 🔥 aire superior elegante */
+
+  background: var(--vino);
+  border-radius: 260px 260px 0 0;
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+/* ========================================================= */
+/* CONTENIDO                                                 */
+/* ========================================================= */
+
+.rsvp-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.rsvp-text {
+  font-size: 0.9rem;   /* 👈 más pequeño */
+  line-height: 1.6;
+  opacity: 0.8;        /* 👈 más suave */
+  max-width: 260px;    /* 👈 más compacto */
+  margin: 12px auto 18px;
+}
+
+/* ========================================================= */
+/* INPUT                                                     */
+/* ========================================================= */
+
+#rsvpNombreInput {
+  width: 240px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 12px;
+  background: var(--arena);
+  border: 1px solid #cbbcbc;
+
+  text-align: center;
+  color: #000;
+
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+#rsvpNombreInput:focus {
+  border-color: #a88c8c;
+  box-shadow: 0 0 0 2px rgba(168, 140, 140, 0.2);
+}
+
+/* ========================================================= */
+/* BOTONES                                                   */
+/* ========================================================= */
+
+.rsvp-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.rsvp-btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  color: var(--blanco);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.rsvp-btn:hover {
+  background: var(--arena);
+  color: var(--negro);
+  transform: translateY(-2px);
+}
+
+/* ========================================================= */
+/* ESTADO FINAL                                              */
+/* ========================================================= */
+
+#rsvp-final {
+  display: none;
+
+  margin-top: 2rem;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: all 0.45s ease;
+}
+
+#rsvp.completed #rsvp-form {
+  display: none;
+}
+
+#rsvp.completed #rsvp-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TEXTO FINAL */
+#rsvp-final h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+#rsvp-final p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* FIRMA */
+.rsvp-sign {
+  margin-top: 30px;
+  font-family: "Great Vibes", cursive;
+  font-size: 30px;
+  color: #5e7c6f;
+  opacity: 0.9;
+}
+
+/* ========================================================= */
+/* INFO PASES                                                */
+/* ========================================================= */
 
 .rsvp-pass-info {
-  margin: 1.8rem 0 1.2rem;
-  padding: 1.2rem 1.6rem;
-  border-radius: 22px;
+  margin: 1.8rem 0;
+  padding: 1.2rem 1.4rem;
+  border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(6px);
 
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
-  text-align: center;
-
-  animation: fadeIn 0.6s ease forwards;
 }
 
 .rsvp-pass-item {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 .rsvp-pass-item:last-child {
@@ -2345,33 +2221,76 @@ body.footer-ready footer.site-footer {
 }
 
 .rsvp-pass-item .label {
-  display: block;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: #7c8f84;
+}
+
+.rsvp-pass-item strong {
+  font-size: 17px;
+  color: #2f3e35;
+}
+
+.rsvp-note {
+  font-size: 0.85rem; /* 👈 más pequeño */
+  line-height: 1.5;
+  opacity: 0.75; /* 👈 más suave */
+  max-width: 280px; /* 👈 más compacto */
+  margin: 20px auto 0; /* 👈 centrado y separado */
+}
+/* ========================================================= */
+/* NOMBRE INVITADO                                           */
+/* ========================================================= */
+
+.rsvp-guest-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  margin: 10px 0 14px;
+}
+
+.rsvp-guest-name::before {
+  content: "Invitación para";
+  display: block;
+
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
   color: #7c8f84;
   margin-bottom: 4px;
 }
 
-.rsvp-pass-item strong {
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-  color: #2f3e35;
-}
+/* ========================================================= */
+/* RESPONSIVE                                                */
+/* ========================================================= */
 
-#rsvp-final {
-  animation: fadeUp 0.8s ease both;
-}
+@media (max-width: 480px) {
+  #rsvp .arco-base {
+    width: 86%;
+    max-width: 320px;
+    min-height: 580px;
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
+    padding: 120px 28px 70px;
+
+    border-radius: 200px 200px 0 0;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  #rsvpNombreInput {
+    width: 100%;
+  }
+
+  .rsvp-options {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .rsvp-btn {
+    width: 100%;
+  }
+
+  #rsvp-final p {
+    max-width: 100%;
   }
 }
 
@@ -2457,66 +2376,44 @@ body.footer-ready footer.site-footer {
   justify-content: center;
 }
 /* ========================================================= */
-/* SOBRE – DEFINITIVO, COLOR CORRECTO Y ESCALABLE            */
+/* SOBRE – DEFINITIVO (VINO LIMPIO Y ELEGANTE)               */
 /* ========================================================= */
 
 .envelope {
   width: min(92vw, 420px);
   aspect-ratio: 420 / 235;
   position: relative;
-  background:
-    linear-gradient(145deg, #6a0d0d 0%, #4e0000 40%, #2c0000 100%),
-    radial-gradient(
-      circle at 25% 20%,
-      rgba(255, 255, 255, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(circle at 80% 90%, rgba(0, 0, 0, 0.35), transparent 60%);
-  perspective: 900px;
+
+  background: linear-gradient(
+    145deg,
+    #4a0000,
+    #3a0000 50%,
+    #1f0000
+  );
+
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.2),
+    0 18px 40px rgba(0, 0, 0, 0.25);
+
+  outline: 1px solid rgba(200, 179, 122, 0.2);
   overflow: hidden;
-
-  box-shadow:
-    0 0 1px rgba(0, 0, 0, 0.18),
-    0 14px 34px rgba(0, 0, 0, 0.22);
-  outline: 1px solid rgba(200, 179, 122, 0.25);
-  outline-offset: -6px;
 }
 
-/* ========================================================= */
-/* LÍNEAS EN X (SUAVES)                                      */
-/* ========================================================= */
-
-.envelope:after {
+.envelope::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 10px;
 
-  background:
-    radial-gradient(
-      circle at 30% 20%,
-      rgba(255, 255, 255, 0.15),
-      transparent 60%
-    ),
-    linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.04);
 
-  mix-blend-mode: soft-light;
-  opacity: 0.7;
-}
-
-.envelope:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(160deg, #7a1624, #4a0c16);
-  clip-path: polygon(0 0, 100% 0, 50% 65%);
   box-shadow:
-    inset 0 12px 20px rgba(0, 0, 0, 0.55),
-    /* profundidad fuerte */ inset 0 -4px 10px rgba(255, 255, 255, 0.05),
-    /* rebote de luz */ 0 10px 20px rgba(0, 0, 0, 0.25); /* separación del sobre */
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    inset 0 -8px 18px rgba(0,0,0,0.4);
+
+  pointer-events: none;
 }
 /* ========================================================= */
-/* SOLAPAS                                                   */
+/* SOLAPAS BASE                                              */
 /* ========================================================= */
 
 .flap {
@@ -2526,7 +2423,10 @@ body.footer-ready footer.site-footer {
   border-style: solid;
 }
 
-/* INFERIOR */
+/* ========================================================= */
+/* SOLAPA INFERIOR (más profunda)                            */
+/* ========================================================= */
+
 .flap.front {
   border-width: 118px 210px;
   border-left-color: var(--envelope-color);
@@ -2534,63 +2434,60 @@ body.footer-ready footer.site-footer {
   border-bottom-color: var(--envelope-color);
   border-top-color: transparent;
   z-index: 3;
-  filter: brightness(0.96);
+
   box-shadow:
-    inset 0 -10px 18px rgba(0, 0, 0, 0.35),
-    inset 0 4px 8px rgba(255, 255, 255, 0.05);
+    inset 0 14px 22px rgba(0, 0, 0, 0.55),
+    0 14px 28px rgba(0, 0, 0, 0.35);
 }
 
-.flap.front::after {
+.flap.top::after {
   content: "";
   position: absolute;
-  left: -210px;
-  bottom: -118px;
-  border-width: 116px 210px;
-  border-style: solid;
-  border-bottom-color: var(--vino);
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  opacity: 0.6;
 }
 
-/* SUPERIOR */
+/* ========================================================= */
+/* SOLAPA SUPERIOR (ligeramente más clara ✨)                 */
+/* ========================================================= */
+
 .flap.top {
   border-width: 118px 210px;
-  border-top-color: transparent;
+  border-top-color: #750505;
+
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
+
   transform-origin: top center;
-  transform-style: preserve-3d;
   z-index: 4;
-  filter: brightness(1.08);
 
   box-shadow:
-    inset 0 10px 18px rgba(0, 0, 0, 0.45),
-    0 6px 12px rgba(0, 0, 0, 0.25);
+    inset 0 14px 22px rgba(0, 0, 0, 0.55),
+    0 8px 16px rgba(0, 0, 0, 0.28); /* 👈 sombra proyectada */
 }
 
 .flap.top::before {
   content: "";
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(160deg, #b91919 0%, #4e0000 55%, #2a0000 100%),
-    radial-gradient(
-      circle at 50% 10%,
-      rgba(255, 255, 255, 0.12),
-      transparent 55%
-    );
-
-  clip-path: polygon(0 0, 100% 0, 50% 65%);
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
 
   box-shadow:
-    inset 0 10px 18px rgba(0, 0, 0, 0.5),
-    /* profundidad */ inset 0 -4px 10px rgba(255, 255, 255, 0.05),
-    /* rebote de luz */ 0 6px 12px rgba(0, 0, 0, 0.25); /* separación */
+    inset 0 14px 22px rgba(0, 0, 0, 0.6),
+    inset 0 -4px 6px rgba(255, 255, 255, 0.015);
 }
-
 /* ========================================================= */
 /* CARTA (CONTENEDOR DEL SITIO)                              */
 /* ========================================================= */
