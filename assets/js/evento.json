@@ -32,7 +32,7 @@
     "src": "cancion.mp3",
     "autoplay_on_open": true,
     "loop": true,
-    "volume": 0.5,
+    "volume": 0.3,
     "fade_in": true,
     "icons": {
       "play": "play.svg",
@@ -139,7 +139,7 @@
       {
         "hora": "13:00 hrs",
         "texto": "Recepción",
-        "icono": "6.svg",
+        "icono": "7.svg",
         "lado": "right"
       },
       {
