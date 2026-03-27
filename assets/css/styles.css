@@ -8,13 +8,13 @@
   --verde-olivo: #6f7469;
   --verde-gris: #a2af9c;
   --shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
-  --envelope-color: #c56055;
+  --envelope-color: #B71C1C;
   --gold-primary: #9c7a2f;
   --gold-soft: #c8b37a;
   --gold: #9e8451;
   --text-soft: #6b6b6b;
 
-  --vino: #b14437;
+  --vino: #B71C1C;
   --rojo-principal: #8f0000; /* 🔥 rojo quemado dominante */
   --verde-mx: #2e7d32;
   --amarillo-mx: #fbc02d;
@@ -2441,6 +2441,7 @@ body.footer-ready footer.site-footer {
 
   transform-origin: top center;
   z-index: 4;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
 }
 
 .flap.top::before {
