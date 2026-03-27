@@ -297,7 +297,7 @@ fetch("assets/js/evento.json")
           <div class="item ${lado} reveal reveal-${lado}">
             <img class="icon" src="assets/img/${item.icono}">
             <div class="hora">${item.hora}</div>
-            <div class="texto">${item.texto}</div>
+            <div class="texto">${String(item.texto).replace(/\n/g, "<br>")}</div>
           </div>
         `,
         );
