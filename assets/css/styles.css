@@ -542,7 +542,7 @@ body.content-ready .navbar {
 @media (max-width: 480px) {
   .site-root::before,
   .site-root::after {
-    width: 80px; /* 🔥 más delgado */
+    width: 90px; /* 🔥 más delgado */
     opacity: 0.75;
 
     background-size: 100% auto;
@@ -552,11 +552,11 @@ body.content-ready .navbar {
   }
 
   .site-root::before {
-    left: -20px; /* 🔥 lo empujamos afuera */
+    left: -30px; /* 🔥 lo empujamos afuera */
   }
 
   .site-root::after {
-    right: -20px;
+    right: -30px;
   }
 
   .hero-count {
@@ -2100,12 +2100,17 @@ body.footer-ready footer.site-footer {
   margin: 12px auto;
   padding: 12px 14px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.9); /* 👈 más limpio */
-  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 0, 0, 0.18);
   text-align: center;
-  color: var(--vino); /* 🔥 combina con tu diseño */
-  font-weight: 500;
+
+  color: #111111;      /* negro más fuerte */
+  font-size: 16px;     /* un poquito más visible */
+  font-weight: 600;    /* más marcado */
+  line-height: 1.2;
+
   outline: none;
+  -webkit-text-fill-color: #111111; /* por si el navegador lo apaga */
 }
 
 #rsvpNombreInput:focus {
@@ -2277,6 +2282,7 @@ body.footer-ready footer.site-footer {
 
   #rsvpNombreInput {
     width: 100%;
+    font-size: 14px;
   }
 
   .rsvp-options {
@@ -2406,9 +2412,9 @@ body.footer-ready footer.site-footer {
 
 .flap.front {
   border-width: 118px 210px;
-  border-left-color: var(--envelope-color);
-  border-right-color: var(--envelope-color);
-  border-bottom-color: var(--envelope-color);
+  border-left-color: var(--vino);
+  border-right-color: var(--vino);
+  border-bottom-color: var(--vino);
   border-top-color: transparent;
   z-index: 3;
 }
@@ -2437,7 +2443,7 @@ body.footer-ready footer.site-footer {
 
 .flap.top {
   border-width: 118px 210px;
-  border-top-color: var(--rojo-principal);
+  border-top-color: var(--envelope-color);
 
   border-left-color: transparent;
   border-right-color: transparent;
