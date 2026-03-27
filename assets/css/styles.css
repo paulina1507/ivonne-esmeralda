@@ -8,14 +8,14 @@
   --verde-olivo: #6f7469;
   --verde-gris: #a2af9c;
   --shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
-  --envelope-color: #650000;
+  --envelope-color: #6f0000;
   --gold-primary: #9c7a2f;
   --gold-soft: #c8b37a;
   --gold: #9e8451;
   --text-soft: #6b6b6b;
 
   --vino: #4e0000;
-  --rojo-principal: #b70000; /* 🔥 rojo quemado dominante */
+  --rojo-principal: #8b0000; /* 🔥 rojo quemado dominante */
   --verde-mx: #2e7d32;
   --amarillo-mx: #fbc02d;
   --azul-rey: #1e40af;
@@ -2464,7 +2464,7 @@ body.footer-ready footer.site-footer {
 
 .flap.top {
   border-width: 118px 210px;
-  border-top-color: #840000;
+  border-top-color: var(--rojo-principal);
 
   border-left-color: transparent;
   border-right-color: transparent;
