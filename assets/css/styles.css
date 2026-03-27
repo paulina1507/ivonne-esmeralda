@@ -542,7 +542,7 @@ body.content-ready .navbar {
 @media (max-width: 480px) {
   .site-root::before,
   .site-root::after {
-    width: 60px; /* 🔥 más delgado */
+    width: 80px; /* 🔥 más delgado */
     opacity: 0.75;
 
     background-size: 100% auto;
@@ -2095,18 +2095,17 @@ body.footer-ready footer.site-footer {
 /* ========================================================= */
 
 #rsvpNombreInput {
+  display: block;
   width: 240px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  margin: 12px;
-  background: var(--arena);
-  border: 1px solid #cbbcbc;
-
+  margin: 12px auto;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9); /* 👈 más limpio */
+  border: 1px solid rgba(0,0,0,0.15);
   text-align: center;
-  color: #000;
-
+  color: var(--vino); /* 🔥 combina con tu diseño */
+  font-weight: 500;
   outline: none;
-  transition: all 0.2s ease;
 }
 
 #rsvpNombreInput:focus {
